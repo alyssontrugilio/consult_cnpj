@@ -1,4 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import 'cnaes_secundarios/cnaes_secundarios.dart';
+import 'qsa/qsa.dart';
 part 'info_cnpj_entity.freezed.dart';
 
 @freezed
@@ -6,6 +9,7 @@ class InfoCnpjEntity with _$InfoCnpjEntity {
   const factory InfoCnpjEntity({
     required String uf,
     required String cep,
+    required QsaEntity qsa,
     required String cnpj,
     required String porte,
     required String bairro,
@@ -24,6 +28,7 @@ class InfoCnpjEntity with _$InfoCnpjEntity {
     required bool opcaoPeloMei,
     required String descPorte,
     required int codMunicipio,
+    required CnaesSecundariosEntity cnaesSecond,
     required String naturezaJuridica,
     required String situacaoEspecial,
     required bool opcaoPeloSimples,
@@ -48,9 +53,10 @@ class InfoCnpjEntity with _$InfoCnpjEntity {
   }) = _InfoCnpjEntity;
 
   factory InfoCnpjEntity.empty() {
-    return const InfoCnpjEntity(
+    return InfoCnpjEntity(
       uf: '',
       cep: '',
+      qsa: QsaEntity.empty(),
       cnpj: '',
       porte: '',
       bairro: '',
@@ -69,6 +75,7 @@ class InfoCnpjEntity with _$InfoCnpjEntity {
       opcaoPeloMei: false,
       descPorte: '',
       codMunicipio: 0,
+      cnaesSecond: CnaesSecundariosEntity.empty(),
       naturezaJuridica: '',
       situacaoEspecial: '',
       opcaoPeloSimples: false,

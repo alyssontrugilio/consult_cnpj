@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$InfoCnpjEntity {
   String get uf => throw _privateConstructorUsedError;
   String get cep => throw _privateConstructorUsedError;
+  QsaEntity get qsa => throw _privateConstructorUsedError;
   String get cnpj => throw _privateConstructorUsedError;
   String get porte => throw _privateConstructorUsedError;
   String get bairro => throw _privateConstructorUsedError;
@@ -36,6 +37,7 @@ mixin _$InfoCnpjEntity {
   bool get opcaoPeloMei => throw _privateConstructorUsedError;
   String get descPorte => throw _privateConstructorUsedError;
   int get codMunicipio => throw _privateConstructorUsedError;
+  CnaesSecundariosEntity get cnaesSecond => throw _privateConstructorUsedError;
   String get naturezaJuridica => throw _privateConstructorUsedError;
   String get situacaoEspecial => throw _privateConstructorUsedError;
   bool get opcaoPeloSimples => throw _privateConstructorUsedError;
@@ -73,6 +75,7 @@ abstract class $InfoCnpjEntityCopyWith<$Res> {
   $Res call(
       {String uf,
       String cep,
+      QsaEntity qsa,
       String cnpj,
       String porte,
       String bairro,
@@ -91,6 +94,7 @@ abstract class $InfoCnpjEntityCopyWith<$Res> {
       bool opcaoPeloMei,
       String descPorte,
       int codMunicipio,
+      CnaesSecundariosEntity cnaesSecond,
       String naturezaJuridica,
       String situacaoEspecial,
       bool opcaoPeloSimples,
@@ -112,6 +116,9 @@ abstract class $InfoCnpjEntityCopyWith<$Res> {
       String descTipoDeLogradouro,
       String descMotivoSituacaoCadastral,
       String descIdentificadorMatrizFilial});
+
+  $QsaEntityCopyWith<$Res> get qsa;
+  $CnaesSecundariosEntityCopyWith<$Res> get cnaesSecond;
 }
 
 /// @nodoc
@@ -129,6 +136,7 @@ class _$InfoCnpjEntityCopyWithImpl<$Res, $Val extends InfoCnpjEntity>
   $Res call({
     Object? uf = null,
     Object? cep = null,
+    Object? qsa = null,
     Object? cnpj = null,
     Object? porte = null,
     Object? bairro = null,
@@ -147,6 +155,7 @@ class _$InfoCnpjEntityCopyWithImpl<$Res, $Val extends InfoCnpjEntity>
     Object? opcaoPeloMei = null,
     Object? descPorte = null,
     Object? codMunicipio = null,
+    Object? cnaesSecond = null,
     Object? naturezaJuridica = null,
     Object? situacaoEspecial = null,
     Object? opcaoPeloSimples = null,
@@ -178,6 +187,10 @@ class _$InfoCnpjEntityCopyWithImpl<$Res, $Val extends InfoCnpjEntity>
           ? _value.cep
           : cep // ignore: cast_nullable_to_non_nullable
               as String,
+      qsa: null == qsa
+          ? _value.qsa
+          : qsa // ignore: cast_nullable_to_non_nullable
+              as QsaEntity,
       cnpj: null == cnpj
           ? _value.cnpj
           : cnpj // ignore: cast_nullable_to_non_nullable
@@ -250,6 +263,10 @@ class _$InfoCnpjEntityCopyWithImpl<$Res, $Val extends InfoCnpjEntity>
           ? _value.codMunicipio
           : codMunicipio // ignore: cast_nullable_to_non_nullable
               as int,
+      cnaesSecond: null == cnaesSecond
+          ? _value.cnaesSecond
+          : cnaesSecond // ignore: cast_nullable_to_non_nullable
+              as CnaesSecundariosEntity,
       naturezaJuridica: null == naturezaJuridica
           ? _value.naturezaJuridica
           : naturezaJuridica // ignore: cast_nullable_to_non_nullable
@@ -336,6 +353,22 @@ class _$InfoCnpjEntityCopyWithImpl<$Res, $Val extends InfoCnpjEntity>
               as String,
     ) as $Val);
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QsaEntityCopyWith<$Res> get qsa {
+    return $QsaEntityCopyWith<$Res>(_value.qsa, (value) {
+      return _then(_value.copyWith(qsa: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CnaesSecundariosEntityCopyWith<$Res> get cnaesSecond {
+    return $CnaesSecundariosEntityCopyWith<$Res>(_value.cnaesSecond, (value) {
+      return _then(_value.copyWith(cnaesSecond: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -349,6 +382,7 @@ abstract class _$$InfoCnpjEntityImplCopyWith<$Res>
   $Res call(
       {String uf,
       String cep,
+      QsaEntity qsa,
       String cnpj,
       String porte,
       String bairro,
@@ -367,6 +401,7 @@ abstract class _$$InfoCnpjEntityImplCopyWith<$Res>
       bool opcaoPeloMei,
       String descPorte,
       int codMunicipio,
+      CnaesSecundariosEntity cnaesSecond,
       String naturezaJuridica,
       String situacaoEspecial,
       bool opcaoPeloSimples,
@@ -388,6 +423,11 @@ abstract class _$$InfoCnpjEntityImplCopyWith<$Res>
       String descTipoDeLogradouro,
       String descMotivoSituacaoCadastral,
       String descIdentificadorMatrizFilial});
+
+  @override
+  $QsaEntityCopyWith<$Res> get qsa;
+  @override
+  $CnaesSecundariosEntityCopyWith<$Res> get cnaesSecond;
 }
 
 /// @nodoc
@@ -403,6 +443,7 @@ class __$$InfoCnpjEntityImplCopyWithImpl<$Res>
   $Res call({
     Object? uf = null,
     Object? cep = null,
+    Object? qsa = null,
     Object? cnpj = null,
     Object? porte = null,
     Object? bairro = null,
@@ -421,6 +462,7 @@ class __$$InfoCnpjEntityImplCopyWithImpl<$Res>
     Object? opcaoPeloMei = null,
     Object? descPorte = null,
     Object? codMunicipio = null,
+    Object? cnaesSecond = null,
     Object? naturezaJuridica = null,
     Object? situacaoEspecial = null,
     Object? opcaoPeloSimples = null,
@@ -452,6 +494,10 @@ class __$$InfoCnpjEntityImplCopyWithImpl<$Res>
           ? _value.cep
           : cep // ignore: cast_nullable_to_non_nullable
               as String,
+      qsa: null == qsa
+          ? _value.qsa
+          : qsa // ignore: cast_nullable_to_non_nullable
+              as QsaEntity,
       cnpj: null == cnpj
           ? _value.cnpj
           : cnpj // ignore: cast_nullable_to_non_nullable
@@ -524,6 +570,10 @@ class __$$InfoCnpjEntityImplCopyWithImpl<$Res>
           ? _value.codMunicipio
           : codMunicipio // ignore: cast_nullable_to_non_nullable
               as int,
+      cnaesSecond: null == cnaesSecond
+          ? _value.cnaesSecond
+          : cnaesSecond // ignore: cast_nullable_to_non_nullable
+              as CnaesSecundariosEntity,
       naturezaJuridica: null == naturezaJuridica
           ? _value.naturezaJuridica
           : naturezaJuridica // ignore: cast_nullable_to_non_nullable
@@ -618,6 +668,7 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
   const _$InfoCnpjEntityImpl(
       {required this.uf,
       required this.cep,
+      required this.qsa,
       required this.cnpj,
       required this.porte,
       required this.bairro,
@@ -636,6 +687,7 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
       required this.opcaoPeloMei,
       required this.descPorte,
       required this.codMunicipio,
+      required this.cnaesSecond,
       required this.naturezaJuridica,
       required this.situacaoEspecial,
       required this.opcaoPeloSimples,
@@ -662,6 +714,8 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
   final String uf;
   @override
   final String cep;
+  @override
+  final QsaEntity qsa;
   @override
   final String cnpj;
   @override
@@ -698,6 +752,8 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
   final String descPorte;
   @override
   final int codMunicipio;
+  @override
+  final CnaesSecundariosEntity cnaesSecond;
   @override
   final String naturezaJuridica;
   @override
@@ -743,7 +799,7 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
 
   @override
   String toString() {
-    return 'InfoCnpjEntity(uf: $uf, cep: $cep, cnpj: $cnpj, porte: $porte, bairro: $bairro, numero: $numero, dddFax: $dddFax, municipio: $municipio, logradouro: $logradouro, cnaeFiscal: $cnaeFiscal, complemento: $complemento, codPorte: $codPorte, razaoSocial: $razaoSocial, nomeFantasia: $nomeFantasia, capitalSocial: $capitalSocial, dddTelefone1: $dddTelefone1, dddTelefone2: $dddTelefone2, opcaoPeloMei: $opcaoPeloMei, descPorte: $descPorte, codMunicipio: $codMunicipio, naturezaJuridica: $naturezaJuridica, situacaoEspecial: $situacaoEspecial, opcaoPeloSimples: $opcaoPeloSimples, situacaoCadastral: $situacaoCadastral, dataOpcaoPeloMei: $dataOpcaoPeloMei, dataExclusaoDoMei: $dataExclusaoDoMei, cnaeFiscalDescricao: $cnaeFiscalDescricao, codMunicipioIbge: $codMunicipioIbge, dataInicioAtividade: $dataInicioAtividade, dataOpcaoPeloSimples: $dataOpcaoPeloSimples, dataSituacaoCadastral: $dataSituacaoCadastral, nomeCidadeNoExterior: $nomeCidadeNoExterior, codNaturezaJuridica: $codNaturezaJuridica, dataExclusaoDoSimples: $dataExclusaoDoSimples, motivoSituacaoCadastral: $motivoSituacaoCadastral, identificadorMatrizFilial: $identificadorMatrizFilial, qualificacaoDoResponsavel: $qualificacaoDoResponsavel, descSituacaoCadastral: $descSituacaoCadastral, descTipoDeLogradouro: $descTipoDeLogradouro, descMotivoSituacaoCadastral: $descMotivoSituacaoCadastral, descIdentificadorMatrizFilial: $descIdentificadorMatrizFilial)';
+    return 'InfoCnpjEntity(uf: $uf, cep: $cep, qsa: $qsa, cnpj: $cnpj, porte: $porte, bairro: $bairro, numero: $numero, dddFax: $dddFax, municipio: $municipio, logradouro: $logradouro, cnaeFiscal: $cnaeFiscal, complemento: $complemento, codPorte: $codPorte, razaoSocial: $razaoSocial, nomeFantasia: $nomeFantasia, capitalSocial: $capitalSocial, dddTelefone1: $dddTelefone1, dddTelefone2: $dddTelefone2, opcaoPeloMei: $opcaoPeloMei, descPorte: $descPorte, codMunicipio: $codMunicipio, cnaesSecond: $cnaesSecond, naturezaJuridica: $naturezaJuridica, situacaoEspecial: $situacaoEspecial, opcaoPeloSimples: $opcaoPeloSimples, situacaoCadastral: $situacaoCadastral, dataOpcaoPeloMei: $dataOpcaoPeloMei, dataExclusaoDoMei: $dataExclusaoDoMei, cnaeFiscalDescricao: $cnaeFiscalDescricao, codMunicipioIbge: $codMunicipioIbge, dataInicioAtividade: $dataInicioAtividade, dataOpcaoPeloSimples: $dataOpcaoPeloSimples, dataSituacaoCadastral: $dataSituacaoCadastral, nomeCidadeNoExterior: $nomeCidadeNoExterior, codNaturezaJuridica: $codNaturezaJuridica, dataExclusaoDoSimples: $dataExclusaoDoSimples, motivoSituacaoCadastral: $motivoSituacaoCadastral, identificadorMatrizFilial: $identificadorMatrizFilial, qualificacaoDoResponsavel: $qualificacaoDoResponsavel, descSituacaoCadastral: $descSituacaoCadastral, descTipoDeLogradouro: $descTipoDeLogradouro, descMotivoSituacaoCadastral: $descMotivoSituacaoCadastral, descIdentificadorMatrizFilial: $descIdentificadorMatrizFilial)';
   }
 
   @override
@@ -753,6 +809,7 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
             other is _$InfoCnpjEntityImpl &&
             (identical(other.uf, uf) || other.uf == uf) &&
             (identical(other.cep, cep) || other.cep == cep) &&
+            (identical(other.qsa, qsa) || other.qsa == qsa) &&
             (identical(other.cnpj, cnpj) || other.cnpj == cnpj) &&
             (identical(other.porte, porte) || other.porte == porte) &&
             (identical(other.bairro, bairro) || other.bairro == bairro) &&
@@ -784,6 +841,8 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
                 other.descPorte == descPorte) &&
             (identical(other.codMunicipio, codMunicipio) ||
                 other.codMunicipio == codMunicipio) &&
+            (identical(other.cnaesSecond, cnaesSecond) ||
+                other.cnaesSecond == cnaesSecond) &&
             (identical(other.naturezaJuridica, naturezaJuridica) ||
                 other.naturezaJuridica == naturezaJuridica) &&
             (identical(other.situacaoEspecial, situacaoEspecial) ||
@@ -836,6 +895,7 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
         runtimeType,
         uf,
         cep,
+        qsa,
         cnpj,
         porte,
         bairro,
@@ -854,6 +914,7 @@ class _$InfoCnpjEntityImpl implements _InfoCnpjEntity {
         opcaoPeloMei,
         descPorte,
         codMunicipio,
+        cnaesSecond,
         naturezaJuridica,
         situacaoEspecial,
         opcaoPeloSimples,
@@ -889,6 +950,7 @@ abstract class _InfoCnpjEntity implements InfoCnpjEntity {
   const factory _InfoCnpjEntity(
           {required final String uf,
           required final String cep,
+          required final QsaEntity qsa,
           required final String cnpj,
           required final String porte,
           required final String bairro,
@@ -907,6 +969,7 @@ abstract class _InfoCnpjEntity implements InfoCnpjEntity {
           required final bool opcaoPeloMei,
           required final String descPorte,
           required final int codMunicipio,
+          required final CnaesSecundariosEntity cnaesSecond,
           required final String naturezaJuridica,
           required final String situacaoEspecial,
           required final bool opcaoPeloSimples,
@@ -934,6 +997,8 @@ abstract class _InfoCnpjEntity implements InfoCnpjEntity {
   String get uf;
   @override
   String get cep;
+  @override
+  QsaEntity get qsa;
   @override
   String get cnpj;
   @override
@@ -970,6 +1035,8 @@ abstract class _InfoCnpjEntity implements InfoCnpjEntity {
   String get descPorte;
   @override
   int get codMunicipio;
+  @override
+  CnaesSecundariosEntity get cnaesSecond;
   @override
   String get naturezaJuridica;
   @override
